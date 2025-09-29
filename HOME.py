@@ -180,7 +180,7 @@ elif pages == "📥 تنبأ بأسرة واحدة":
             if typ == "integer":
                 values[name] = st.number_input(f"{name}", value=0, step=1)
             elif typ == "numeric":
-                values[name] = st.number_input(f"{name}", value=0.0)
+                values[name] = st.number_input(f"{name}", min_value=0, step=1)
             elif typ == "category" and choices:
                 values[name] = st.selectbox(f"{name}", choices=choices)
             else:
